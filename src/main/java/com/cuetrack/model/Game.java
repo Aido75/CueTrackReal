@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 
 public class Game {
 
+    //variable declaration
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "game_id")
@@ -42,4 +43,77 @@ public class Game {
     @Column(name = "notes", columnDefinition = "TEXT")
     private String notes;
 
+    //Constructor
+    public Game() {
+
+    }
+
+    //getters
+    public Integer getGameId(){
+        return gameId;
+    }
+
+    public LocalDate getDate(){
+        return date;
+    }
+
+    public Opponent getOpponent(){
+        return opponent;
+    }
+
+    public String getResult(){
+        return result;
+    }
+
+    public String getVenue(){
+        return venue;
+    }
+
+    public BigDecimal getTableSize(){
+        return tableSize;
+    }
+
+    public BigDecimal getCueWeight(){
+        return cueWeight;
+    }
+
+    public int getScratches(){
+        return scratches;
+    }
+
+    public int getLongestRun(){
+        return longestRun;
+    }
+
+    public String getNotes(){
+        return notes;
+    }
+
+    //setters
+
+    public void setGameId(Integer gameId){
+        this.gameID = gameId;
+    }
+
+    public void setDate(LocalDate date){
+        this.date = date;
+    }
+
+    public void setOpponent(Opponent opponent){
+        this.opponent = opponent;
+    }
+
+    public void setResult(String result){
+        this.result = result;
+    }
+
+    public void setVenue(String venue){
+        this.venue = venue;
+    }
+
+
+
+
+
 }
+

@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 
 public class Opponent {
 
+    //variable declaration
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "opponent_id")
@@ -21,6 +22,7 @@ public class Opponent {
 
     //Getters
     public Integer getOpponentId(){
+
         return opponentId;
     }
 
@@ -30,6 +32,7 @@ public class Opponent {
 
     //Setters
     public void setOpponentId(Integer opponentId){
+
         this.opponentId = opponentId;
     }
 
