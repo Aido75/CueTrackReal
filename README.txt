@@ -1,0 +1,1 @@
+Hi. I don't have any setup instructions yet. Just run the setup script in MySQL to see what my database looks like so far.
