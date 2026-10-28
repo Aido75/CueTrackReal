@@ -92,7 +92,7 @@ public class Game {
     //setters
 
     public void setGameId(Integer gameId){
-        this.gameID = gameId;
+        this.gameId = gameId;
     }
 
     public void setDate(LocalDate date){
@@ -110,6 +110,27 @@ public class Game {
     public void setVenue(String venue){
         this.venue = venue;
     }
+
+    public void setTableSize(BigDecimal tableSize) {
+        this.tableSize = tableSize;
+    }
+
+    public void setCueWeight(BigDecimal cueWeight) {
+        this.cueWeight = cueWeight;
+    }
+
+    public void setScratches(int scratches) {
+        this.scratches = scratches;
+    }
+
+    public void setLongestRun(int longestRun) {
+        this.longestRun = longestRun;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
 
 
 
