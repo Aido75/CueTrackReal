@@ -14,7 +14,7 @@ public class PracticeSession {
     @Column(name = "practice_id")
     private Integer practiceId;
 
-   
+
 
     public PracticeSession() {
     }
