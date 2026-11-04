@@ -48,7 +48,7 @@ public class Game {
 
     }
 
-    //getters
+    //Getters
     public Integer getGameId(){
         return gameId;
     }
@@ -89,7 +89,7 @@ public class Game {
         return notes;
     }
 
-    //setters
+    //Setters
 
     public void setGameId(Integer gameId){
         this.gameId = gameId;

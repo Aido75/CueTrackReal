@@ -16,6 +16,7 @@ public class Opponent {
     @Column(name = "name", nullable = false, length = 45)
     private String name;
 
+    //Constructor
     public Opponent(){
 
     }
