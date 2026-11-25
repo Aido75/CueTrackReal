@@ -21,11 +21,12 @@ public class OpponentController {
     public List<Opponent> getAllOpponents() {
         return opponentRepository.findAll();
     }
-
+    /*
     // Add a new opponent
     @PostMapping
     public Opponent addOpponent(@RequestBody Opponent opponent) {
         opponent.setOpponentId(null);
         return opponentRepository.save(opponent);
     }
+    */
 }

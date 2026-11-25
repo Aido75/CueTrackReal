@@ -24,6 +24,7 @@ public class PracticeSessionController {
     }
 
     // Record a new practice session
+    /*
     @PostMapping
     public PracticeSession addPracticeSession(
             @RequestBody PracticeSession practiceSession) {
@@ -32,4 +33,5 @@ public class PracticeSessionController {
 
         return practiceSessionRepository.save(practiceSession);
     }
+    */
 }

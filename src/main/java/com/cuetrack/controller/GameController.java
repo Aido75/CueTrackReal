@@ -9,6 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
 import java.math.BigDecimal;
@@ -31,12 +32,20 @@ public class GameController {
     @GetMapping
     @Transactional(readOnly = true)
     public List<GameResponse> getAllGames() {
-        return gameRepository.findAll()
-                .stream()
-                .map(this::toResponse)
-                .toList();
+
+        List<Game> games = gameRepository.findAll();
+        List<GameResponse> responses = new ArrayList<>();
+
+        for (int i = 0; i < games.size(); i++) {
+            Game game = games.get(i);
+            GameResponse response = toResponse(game);
+            responses.add(response);
+        }
+
+        return responses;
     }
 
+    /*
     // Record a new game
     @PostMapping
     @Transactional
@@ -63,6 +72,7 @@ public class GameController {
 
         return toResponse(gameRepository.save(game));
     }
+     */
 
     // Convert game entity into response data
     private GameResponse toResponse(Game game) {
