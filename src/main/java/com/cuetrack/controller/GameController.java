@@ -74,15 +74,20 @@ public class GameController {
     }
      */
 
-    // Convert game entity into response data
+    // Convert game data into response data
     private GameResponse toResponse(Game game) {
-        return new GameResponse(
+
+        Opponent opponent = game.getOpponent();
+
+        OpponentResponse opponentResponse = new OpponentResponse(
+                opponent.getOpponentId(),
+                opponent.getName()
+        );
+
+        GameResponse gameResponse = new GameResponse(
                 game.getGameId(),
                 game.getDate(),
-                new OpponentResponse(
-                        game.getOpponent().getOpponentId(),
-                        game.getOpponent().getName()
-                ),
+                opponentResponse,
                 game.getResult(),
                 game.getVenue(),
                 game.getTableSize(),
@@ -91,6 +96,8 @@ public class GameController {
                 game.getLongestRun(),
                 game.getNotes()
         );
+
+        return gameResponse;
     }
 
     public record OpponentResponse(
